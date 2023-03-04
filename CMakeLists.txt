@@ -3,4 +3,4 @@ project(untitled1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled1 src/main.cpp inc/courses.h src/courses.cpp)
+add_executable(untitled1 src/main.cpp inc/courses.h)
