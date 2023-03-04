@@ -46,15 +46,16 @@ class Student {
         return *this;
     }
 
+    //default destructor
     ~Student() {
         cout << "Destructor fired" << endl;
 
-        if (!courseNames) {
+        if (courseNames) {
             cout << "Deleting array" << endl;
             delete [] courseNames;
             courseNames = {};
         }
-    }; //default destructor
+    };
 
     string getName() const{return this->name;}
     void setName(string name) {this->name = name;}
@@ -72,7 +73,7 @@ class Student {
             string* newArr = new string[new_size];
             std::copy(courseNames, courseNames + old_size, newArr);
             delete []courseNames;
-            courseNames = newArr; //deep copy the placeholder array
+            courseNames = newArr;
             delete []newArr; //free memory from placeholder array
         }
 

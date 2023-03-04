@@ -30,7 +30,6 @@ int main() {
 
             if (input == "q" || input == "Q") {
                 //quit the loop
-                numCourses --; //undo the addition to the counter: not actually necessary.
                 stillAdding = false;
             } else {
                 //the addcourse method will also take care of incrementing the student's numcourses property
@@ -53,15 +52,15 @@ int main() {
         cout <<"\nStudent 2: " << student2.getName() << endl;
         student2.printStudentCourses();
 
-        cout << "\nStudent 1 again: " << student1.getName() << endl;
         //Display the 1st student’s name, the number of courses in their list of courses after executing a function
         //that resets the number of courses to 0 and the courseList array to an empty list
+        cout << "\nStudent 1 after reset: " << student1.getName() << endl;
         student1.resetCourses();
         student1.printStudentCourses();
 
         //Display the 2nd student’s name, number of courses in their list and their list of courses (to demonstrate
         //that a deep copy took place).
-        cout << "\nStudent 2 again: " << student2.getName() << endl;
+        cout << "\nStudent 2 to prove deep copy: " << student2.getName() << endl;
         student2.printStudentCourses();
 
         //Enter a third student and use the custom assignment operator i.e. 3rd student = 2nd student
